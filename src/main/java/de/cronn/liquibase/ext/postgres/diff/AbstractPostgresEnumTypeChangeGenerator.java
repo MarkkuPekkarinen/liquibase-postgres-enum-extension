@@ -14,11 +14,13 @@ public abstract class AbstractPostgresEnumTypeChangeGenerator extends AbstractCh
 	}
 
 	@Override
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public Class<? extends DatabaseObject>[] runAfterTypes() {
 		return new Class[0];
 	}
 
 	@Override
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public Class<? extends DatabaseObject>[] runBeforeTypes() {
 		return new Class[0];
 	}

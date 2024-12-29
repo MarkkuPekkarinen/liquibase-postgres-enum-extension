@@ -6,7 +6,7 @@ import liquibase.change.DatabaseChangeProperty;
 import liquibase.database.Database;
 import liquibase.exception.ValidationErrors;
 import liquibase.statement.SqlStatement;
-import liquibase.statement.core.RawSqlStatement;
+import liquibase.statement.core.RawParameterizedSqlStatement;
 
 @DatabaseChange(name = "dropPostgresEnumType",
 	description = "Drops a Postgres enum type",
@@ -46,9 +46,9 @@ public class DropPostgresEnumTypeChange extends AbstractPostgresEnumChange {
 	@Override
 	public SqlStatement[] generateStatements(Database database) {
 		return new SqlStatement[] {
-			new RawSqlStatement("drop cast (varchar as %s)".formatted(name)),
-			new RawSqlStatement("drop cast (%s as varchar)".formatted(name)),
-			new RawSqlStatement("drop type %s".formatted(name))
+			new RawParameterizedSqlStatement("drop cast (varchar as %s)".formatted(name)),
+			new RawParameterizedSqlStatement("drop cast (%s as varchar)".formatted(name)),
+			new RawParameterizedSqlStatement("drop type %s".formatted(name))
 		};
 	}
 }

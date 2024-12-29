@@ -1,6 +1,5 @@
 package de.cronn.liquibase.ext.postgres;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import liquibase.change.ChangeMetaData;
@@ -9,7 +8,7 @@ import liquibase.change.DatabaseChangeProperty;
 import liquibase.database.Database;
 import liquibase.exception.ValidationErrors;
 import liquibase.statement.SqlStatement;
-import liquibase.statement.core.RawSqlStatement;
+import liquibase.statement.core.RawParameterizedSqlStatement;
 
 @DatabaseChange(name = "addPostgresEnumValues",
 	description = "Adds enum values to an existing Postgres enum type",
@@ -61,10 +60,8 @@ public class AddPostgresEnumValuesChange extends AbstractPostgresEnumChange {
 
 	@Override
 	public SqlStatement[] generateStatements(Database database) {
-		List<SqlStatement> statements = new ArrayList<>();
-		for (String valueToAdd : valuesToAdd) {
-			statements.add(new RawSqlStatement("alter type %s add value '%s'".formatted(enumTypeName, valueToAdd)));
-		}
-		return statements.toArray(SqlStatement[]::new);
+		return valuesToAdd.stream()
+			.map(valueToAdd -> new RawParameterizedSqlStatement("alter type %s add value '%s'".formatted(enumTypeName, valueToAdd)))
+			.toArray(SqlStatement[]::new);
 	}
 }

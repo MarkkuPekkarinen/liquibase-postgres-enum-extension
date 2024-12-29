@@ -16,6 +16,7 @@ import liquibase.snapshot.jvm.JdbcSnapshotGenerator;
 import liquibase.structure.DatabaseObject;
 import liquibase.structure.core.Schema;
 
+@SuppressWarnings("unchecked")
 public class PostgresEnumTypeSnapshotGenerator extends JdbcSnapshotGenerator {
 
 	@Language("PostgreSQL")
@@ -27,6 +28,7 @@ public class PostgresEnumTypeSnapshotGenerator extends JdbcSnapshotGenerator {
 		group by t.typname
 		order by t.typname""";
 
+	@SuppressWarnings("rawtypes")
 	public PostgresEnumTypeSnapshotGenerator() {
 		super(PostgresEnumType.class, new Class[] { Schema.class });
 	}

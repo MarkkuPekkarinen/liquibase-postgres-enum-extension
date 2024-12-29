@@ -21,6 +21,7 @@ public class MissingPostgresEnumTypeChangeGenerator extends AbstractPostgresEnum
 		Database comparisonDatabase,
 		ChangeGeneratorChain chain) {
 		String name = missingObject.getName();
+		@SuppressWarnings("unchecked")
 		List<String> values = missingObject.getAttribute("values", List.class);
 		return new Change[] { new CreatePostgresEnumTypeChange(name, values) };
 	}
