@@ -9,9 +9,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
+import org.testcontainers.postgresql.PostgreSQLContainer;
 
 import de.cronn.assertions.validationfile.FileExtensions;
 import de.cronn.postgres.snapshot.util.PostgresDump;
@@ -23,7 +23,7 @@ class DumpWithFullLiquibaseConfigTest extends BaseTest {
 
 	@Container
 	@ServiceConnection
-	static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16.3");
+	static PostgreSQLContainer postgres = new PostgreSQLContainer("postgres:16.3");
 
 	@Autowired
 	DataSource dataSource;

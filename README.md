@@ -78,10 +78,17 @@ to make sure that the value is no longer used, typically using an `UPDATE` state
 <ext:dropPostgresEnumType name="color"/>
 ```
 
+## Version Compatibility ##
+
+This library is available in two major versions that are incompatible with each other:
+
+- **Version 1.x**: Compatible with Liquibase 4.27+ (typically used with Spring Boot 3)
+- **Version 2.x**: Compatible with Liquibase 5+ (typically used with Spring Boot 4+)
+
 ## Requirements ##
 
 - Java 17+
-- Liquibase 4.27+
+- Liquibase 5.0.1+
 
 [postgresql-enums]: https://www.postgresql.org/docs/current/datatype-enum.html
 [liquibase-changelog-generator]: https://github.com/cronn/liquibase-changelog-generator

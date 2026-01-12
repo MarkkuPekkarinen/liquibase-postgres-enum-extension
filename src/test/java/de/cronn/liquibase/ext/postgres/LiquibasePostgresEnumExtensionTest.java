@@ -1,7 +1,7 @@
 package de.cronn.liquibase.ext.postgres;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.persistence.autoconfigure.EntityScan;
 import org.springframework.context.annotation.PropertySource;
 
 import de.cronn.assertions.validationfile.FileExtensions;

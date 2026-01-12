@@ -1,7 +1,7 @@
 package de.cronn.liquibase.ext.postgres.model;
 
 import org.hibernate.annotations.JdbcType;
-import org.hibernate.dialect.PostgreSQLEnumJdbcType;
+import org.hibernate.dialect.type.PostgreSQLEnumJdbcType;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
