@@ -54,13 +54,13 @@ The library provides additional liquibase commands, that can be used within a `c
 <ext:renamePostgresEnumValue enumTypeName="color" oldValue="BLACK" newValue="KEY"/>
 ```
 
-### Removing one or more values of an existing enum
+### Removing one or more values from an existing enum
 
-PostgreSQL does not yet support removing of values of an existing enum. Instead, we implement a workaround
+PostgreSQL does not yet support removing values from an existing enum. Instead, we implement a workaround
 by replacing the enum with a new enum type that has different values (as described in [this blog post][yo1dog-blog]).
 
-⚠ You need to be extra careful when you drop an enum value! First, you need to update the existing tables
-to make sure that the value is not used anymore, typically using an `UPDATE` statement.
+⚠ You need to be extra careful when you drop an enum value! First, you need to update existing tables
+to make sure that the value is no longer used, typically using an `UPDATE` statement.
 
 ```xml
 <ext:modifyPostgresEnumType name="color" newValues="CYAN, MAGENTA, YELLOW, KEY"/>
