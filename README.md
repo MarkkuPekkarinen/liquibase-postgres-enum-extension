@@ -19,7 +19,7 @@ Add the following Maven **runtime** dependency to your project:
 <dependency>
     <groupId>de.cronn</groupId>
     <artifactId>liquibase-postgres-enum-extension</artifactId>
-    <version>1.1</version>
+    <version>2.0</version>
     <scope>runtime</scope>
 </dependency>
 ```
@@ -31,6 +31,13 @@ For Hibernate entities, we recommend annotating attributes of enum type as shown
 @JdbcType(PostgreSQLEnumJdbcType.class)
 Status status;
 ```
+
+## Version Compatibility ##
+
+This library is available in two major versions that are incompatible with each other:
+
+- **Version 1.x**: Compatible with Liquibase 4.27+ (typically used with Spring Boot 3)
+- **Version 2.x**: Compatible with Liquibase 5+ (typically used with Spring Boot 4+)
 
 ## Commands ##
 
@@ -77,13 +84,6 @@ to make sure that the value is no longer used, typically using an `UPDATE` state
 ```xml
 <ext:dropPostgresEnumType name="color"/>
 ```
-
-## Version Compatibility ##
-
-This library is available in two major versions that are incompatible with each other:
-
-- **Version 1.x**: Compatible with Liquibase 4.27+ (typically used with Spring Boot 3)
-- **Version 2.x**: Compatible with Liquibase 5+ (typically used with Spring Boot 4+)
 
 ## Requirements ##
 
