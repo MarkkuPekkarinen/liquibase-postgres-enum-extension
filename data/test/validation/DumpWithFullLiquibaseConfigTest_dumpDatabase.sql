@@ -2,12 +2,15 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 16.3 (Debian 16.3-1.pgdg120+1)
--- Dumped by pg_dump version 16.3 (Debian 16.3-1.pgdg120+1)
+\restrict RESTRICT_1
+
+-- Dumped from database version 18.1 (Debian 18.1-1.pgdg13+2)
+-- Dumped by pg_dump version 18.1 (Debian 18.1-1.pgdg13+2)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
@@ -253,3 +256,5 @@ ALTER TABLE ONLY public.simple_entity_with_enum
 --
 -- PostgreSQL database dump complete
 --
+
+\unrestrict RESTRICT_1
