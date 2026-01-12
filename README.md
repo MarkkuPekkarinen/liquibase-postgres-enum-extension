@@ -1,5 +1,5 @@
 [![CI](https://github.com/cronn/liquibase-postgres-enum-extension/workflows/CI/badge.svg)](https://github.com/cronn/liquibase-postgres-enum-extension/actions)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.cronn/liquibase-postgres-enum-extension/badge.svg)](http://maven-badges.herokuapp.com/maven-central/de.cronn/liquibase-postgres-enum-extension)
+[![Maven Central](https://img.shields.io/maven-central/v/de.cronn/liquibase-postgres-enum-extension?logo=apache%20maven)](https://search.maven.org/#search|ga|1|g:de.cronn%20AND%20liquibase-postgres-enum-extension)
 [![Apache 2.0](https://img.shields.io/github/license/cronn/liquibase-postgres-enum-extension.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![codecov](https://codecov.io/gh/cronn/liquibase-postgres-enum-extension/branch/main/graph/badge.svg?token=KD1WJK5ZFK)](https://codecov.io/gh/cronn/liquibase-postgres-enum-extension)
 [![Valid Gradle Wrapper](https://github.com/cronn/liquibase-postgres-enum-extension/workflows/Validate%20Gradle%20Wrapper/badge.svg)](https://github.com/cronn/liquibase-postgres-enum-extension/actions/workflows/gradle-wrapper-validation.yml)
